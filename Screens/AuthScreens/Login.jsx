@@ -13,11 +13,12 @@ const Login = ({ navigation }) => {
                 btnText={'Login'}
                 elseOption={{ path: 'ForgotPassword', text: 'Dont have an account?' }}
                 footerText='Or login with social account'
+                btnPress={()=>navigation.navigate('Home')}
+
             >
                 <View style={styles.form}>
                     <Input label={'Email'} />
                     <Input label={'Password'} />
-
                 </View>
 
             </AuthBody>

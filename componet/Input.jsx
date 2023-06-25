@@ -2,18 +2,19 @@ import React from 'react'
 import { TextInput, View } from 'react-native'
 import { Typo } from './Texts'
 import { StyleSheet } from 'react-native'
+import { Keyboard } from 'react-native'
 
 const Input = ({ onChangeText = () => null, value, placeholder, keyboardType, label }) => {
     const styles = StyleSheet.create({
         container: {
             height: 64,
             padding: 10,
-            backgroundColor:'white',
-            
+            backgroundColor: 'white',
+
         },
-        field:{
-            fontSize:20,
-            fontWeight:'700'
+        field: {
+            fontSize: 20,
+            fontWeight: '700'
         }
     })
     return (
@@ -28,6 +29,7 @@ const Input = ({ onChangeText = () => null, value, placeholder, keyboardType, la
                 keyboardType={keyboardType}
                 cursorColor={'black'}
                 style={styles.field}
+                onBlur={()=>Keyboard.dismiss()}
             />
         </View>
     )

@@ -8,31 +8,35 @@ const Btn = ({
     title = 'Btn text',
     radius = 4,
     textColor = 'white',
-    width = 'auto'
+    width = 'auto',
+    bC, bS, bW
 }) => {
     const styles = StyleSheet.create({
         btnstyle: {
             color: 'green',
-            paddingVertical:15,
-            paddingHorizontal:32,
-            borderRadius:radius,
-            backgroundColor:color,
-            display:'flex',
-            justifyContent:'center',
-            alignItems:'center',  
-            width ,
-            cursor:'pointer'
+            paddingVertical: 15,
+            paddingHorizontal: 32,
+            borderRadius: radius,
+            backgroundColor: color,
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            width,
+            cursor: 'pointer',
+            borderWidth: bW,
+            borderStyle: bS,
+            borderColor: bC
         },
-        text :{
-            color:textColor,
-            fontWeight:'600',
-            fontSize:16
+        text: {
+            color: textColor,
+            fontWeight: '600',
+            fontSize: 16
         }
     })
     return (
         <Pressable style={styles.btnstyle} onPress={onPress}>
-        <Text style={styles.text} >{title}</Text>
-      </Pressable>
+            <Text style={styles.text} >{title}</Text>
+        </Pressable>
     )
 }
 

@@ -6,7 +6,7 @@ export const Typo = ({
     color = '#000000',
     weight = '400',
     size = 14,
-    width = '100%',
+    // width = '100%',
     align = 'left',
     ...extras
 }) => {
@@ -16,6 +16,8 @@ export const Typo = ({
             fontWeight: weight,
             fontSize: size,
             textAlign: align,
+            // display:'block',
+            // width,
             ...extras
         }
     })

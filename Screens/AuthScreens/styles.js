@@ -42,6 +42,9 @@ export const styles = StyleSheet.create({
         width: 92,
         borderRadius: 20,
         backgroundColor: 'white',
-        marginTop:10
+        marginTop:10,
+        display:'flex',
+        alignItems:'center',
+        justifyContent:'center'
     }
 })
